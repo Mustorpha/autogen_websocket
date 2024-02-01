@@ -9,7 +9,7 @@ from langchain.utilities import SearchApiAPIWrapper
 config_list = [
     {
         "model": "gpt-3.5-turbo",
-        "api_key": "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"
+        "api_key": "OPENAI-API-KEY"
     }
 ]
 llm_config_assistant = {
