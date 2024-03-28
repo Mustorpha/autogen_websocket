@@ -112,13 +112,19 @@ class AutogenChat():
         if "callback" in config and config["callback"] is not None:
             callback = config["callback"]
             callback(sender, recipient, messages[-1])
-        message = messages[-1]["content"]
+        message = messages[-1]["content"]     
+        author = messages[-1]["name"]
+        # if author == "get_info_about":
+        #    author = "researcher"
+        # elif author == "gen_image" or author == "get_image":
+        #     author = "designer"
         response = {
-            "author": recipient.name,
+            # "author": self.websocket.agent_list[-1]
+            "author": author,
             "message": message
             }
         await self.websocket.send(json.dumps(response))
-        return False, None     
+        return False, None    
 
     async def start(self):
         await self.Admin.a_initiate_chat(
