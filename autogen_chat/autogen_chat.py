@@ -130,7 +130,7 @@ class AutogenChat():
         await self.Admin.a_initiate_chat(
             self.manager,
             clear_history=True,
-            message="I am Pramit, CEO of Pushpa Furniture, We build home furniture with modern design and durability."
+            message="I am Mustorpha, CEO of Quarks Technologies, we build devices, machines and robots for continous technological growth of humanity."
         )
     #MOCH Function call 
     #def search_db(self, order_number=None, customer_number=None):
